@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage[]{forest}
+\usepackage{wrapfig}
+\usepackage{verbatim}
+ 
+ \newenvironment{code}
+{
+    \definecolor{codegray}{gray}{0.9}
+    \hspace{-2mm}
+    \vspace{-1mm}
+    \begin{adjustbox}{margin=2mm,bgcolor=codegray}
+    \begin{minipage}{16cm}
+    \ttfamily
+}
+{
+    \end{minipage}
+    \end{adjustbox}
+}
+
+
+\begin{document}
+
+\title{ASSIGNMENT GNUPLOT}
+\author{Raghav Garg \\ 160534\\}
+\maketitle
+\textbf{ONE POINT GRAPH FOR EACH THREAD WHERE X REPRSENTS NUMBER OF ELEMENTS AND Y AXIS REPRESENTS EXECUTION TIME FOR EACH SAMPLE}
+\begin{figure}[h!]
+
+ \caption{\label{tha_label} ....}
+ \includegraphics[scale=1]{Plot1_1.eps}
+ \end{figure}
+
+\pagebreak
+\begin{figure}[h!]
+
+ \caption{\label{tha_label} ....}
+ \includegraphics[scale=1]{Plot1_2.eps}
+ \end{figure}
+
+\pagebreak
+\begin{figure}[h!]
+
+ \caption{\label{tha_label} ....}
+ \includegraphics[scale=1]{Plot1_3.eps}
+ \end{figure}
+
+\pagebreak
+\begin{figure}[h!]
+
+ \caption{\label{tha_label} ....}
+ \includegraphics[scale=1]{Plot1_4.eps}
+ \end{figure}
+
+\pagebreak
+\begin{figure}[h!]
+
+ \caption{\label{tha_label} ....}
+ \includegraphics[scale=1]{Plot1_5.eps}
+ \end{figure}
+
+\begin{verbatim}
+The Given Figure represents the execution time for 100 samples for the given number
+ of elements for different number of threads.With increase in threads, execution time 
+decreases.However this thing is not very much evident with smaller number of elements
+as the latency induced in thread creating is not overcome by task time.
+
+\end{verbatim}
+
+\pagebreak
+
+\begin{figure}[h!]
+\textbf{X is number of elemenets and Y is average Execution time over 100 samples}
+ \caption{\label{tha_label} ....}
+ \includegraphics[scale=1]{Plot2.eps}
+ \end{figure}
+\begin{verbatim}
+The above graph is plotted against log scale of X.We can see that the average execution
+time decreases  with increase in number of threads but since my compute had quad core 
+processor increasing threads beyond 4 did not help much.
+\end{verbatim}
+
+\pagebreak
+
+\begin{figure}[h!]
+\textbf{X is numner of elements and Y is average time for 1 thread}
+ \caption{\label{tha_label} ....}
+ \includegraphics[scale=1]{Plot3.eps}
+ \end{figure}
+\begin{verbatim}
+This is just a bar graph reprenation of the average speedups where the average
+ is calculated for each thread for different number of samples and then the 
+ratio is taken against 1 thread for speedup calculations.Thread 1 has default
+ average of 1.
+\end{verbatim}
+
+\pagebreak
+
+\begin{figure}[h!]
+\textbf{X is numner of elements and Y is average time for 1 thread with error bars shown}
+ \caption{\label{tha_label} ....}
+ \includegraphics[scale=1]{Plot4.eps}
+ \end{figure}
+\begin{verbatim}
+Variance is calculated in the avergae speedup of each threads treating average
+ time of thread  1 as the golden time against which I calculated my means.More
+ error is induced with increasingnumber of threads as the data gets more scattered.
+\end{verbatim}
+
+\pagebreak
+
+
+
+
+\end{document}
