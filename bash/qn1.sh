@@ -119,7 +119,7 @@ if [ $# == 0 ];
 	echo "Enter command"
 	exit
 	fi
-txt=$1
+txt=$0
 zero="0"
 open=`echo $txt|fold -w 1`
 for i in $open;
